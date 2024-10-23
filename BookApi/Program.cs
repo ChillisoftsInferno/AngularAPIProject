@@ -1,24 +1,35 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace BookApi
+namespace BookApi;
+
+public static class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
+        var builder = WebApplication.CreateBuilder(args);
+            
+        builder.Services.AddControllers();
+
+        builder.Services.AddCors(options =>
         {
-            var builder = WebApplication.CreateBuilder(args);
+            options.AddPolicy("MyCors", builder =>
+            {
+                builder
+                    .WithOrigins("http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            });
+        });
             
-            builder.Services.AddControllers();
-            
-            var app = builder.Build();
+        var app = builder.Build();
 
-            app.MapControllers();
+        app.UseCors("MyCors");
 
-            app.MapGet("/", () => Results.Redirect("api/Book"));
+        app.MapControllers();
+
+        app.MapGet("/", () => Results.Redirect("api/Book"));
             
-            app.Run();
-        }
+        app.Run();
     }
 }
-

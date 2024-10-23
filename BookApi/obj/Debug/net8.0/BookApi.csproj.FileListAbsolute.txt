@@ -25,9 +25,13 @@ C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\staticwebassets\
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BookApi.props
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\scopedcss\bundle\BookApi.styles.css
-C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\BookApi.csproj.CopyComplete
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\BookApi.dll
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\refint\BookApi.dll
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\BookApi.pdb
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\BookApi.genruntimeconfig.cache
 C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\ref\BookApi.dll
+C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\BookApi.sourcelink.json
+C:\Users\dante d\RiderProjects\BookApi\BookApi\bin\Debug\net8.0\BookApi.staticwebassets.endpoints.json
+C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\staticwebassets\msbuild.BookApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\dante d\RiderProjects\BookApi\BookApi\obj\Debug\net8.0\BookApi.csproj.Up2Date
