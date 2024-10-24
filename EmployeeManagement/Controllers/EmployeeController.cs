@@ -20,20 +20,36 @@ public class EmployeeController : ControllerBase , IEmployeeController
     public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
     {
         await _employeeRepository.AddEmployeeAsync(employee);
-        return Created();
+        return CreatedAtAction(nameof(FindEmployeeById), new { id = employee.Id }, employee);
     } 
     
     [HttpGet]
-    public async Task<ActionResult<Employee>> FindAllEmployees()
+    public async Task<ActionResult<IEnumerable<Employee>>> FindAllEmployees()
     {
-        await _employeeRepository.GetAllEmployeesAsync();
-        return Ok();
+        var allEmployees = await _employeeRepository.GetAllEmployeesAsync();
+        return !allEmployees.Any() ? NotFound() : Ok(allEmployees);
     } 
     
-    [HttpPut]
-    public async Task<ActionResult<Employee>> UpdateEmployees(Employee employee)
+    [HttpPut("{id}")]
+    public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
     {
+        if(id != employee.Id) return BadRequest();
+        
         await _employeeRepository.UpdateEmployeeAsync(employee);
-        return Ok();
+        return CreatedAtAction(nameof(FindEmployeeById), new { id = employee.Id }, employee);
+    }
+    
+    [HttpGet("{id}")]
+    public async Task<ActionResult<IEnumerable<Employee>>> FindEmployeeById(int id)
+    {
+        var employee = await _employeeRepository.GetEmployeeAsync(id);
+        return employee == null ? NotFound(employee) : Ok(employee);
+    } 
+    
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteEmployeeById(int id)
+    {
+        await _employeeRepository.DeleteEmployeeAsync(id);
+        return NoContent();
     } 
 }

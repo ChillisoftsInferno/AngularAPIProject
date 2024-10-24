@@ -1,0 +1,35 @@
+<h2 class="text-center my-5">{{isEditing ? 'Edit' : 'Create'}} Employee</h2>
+<div *ngIf="errorMessage != null || ''">
+    {{errorMessage}}
+</div>
+<form (ngSubmit)="onSubmit()" class="border bg-body-tertiary border-1 border-dark-subtle rounder p-3 w-75 mb-5 mx-auto">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">First Name</label>
+                <input class="form-control bg-body-secondary" type="text" name="firstName" [(ngModel)]="employee.firstName"/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Last Name</label>
+                <input class="form-control bg-body-secondary" type="text" name="lastName" [(ngModel)]="employee.lastName"/>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-semibold">Phone</label>
+        <input class="form-control bg-body-secondary" type="phone" name="phone" [(ngModel)]="employee.phone"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-semibold">Email</label>
+        <input class="form-control bg-body-secondary" type="email" name="email" [(ngModel)]="employee.email"/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-semibold">Position</label>
+        <input class="form-control bg-body-secondary" type="text" name="position" [(ngModel)]="employee.position"/>
+    </div>
+    <div class="mb-3 mx-auto w-50">
+        <button class="btn btn-primary form-control" type="submit">{{isEditing ? 'Edit' : 'Create'}}</button>   
+    </div>
+</form>

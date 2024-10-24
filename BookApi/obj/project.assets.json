@@ -580,7 +580,7 @@
           "Serilog.Sinks.Console": "5.0.1",
           "Serilog.Sinks.SyslogMessages": "3.0.1",
           "SimpleInjector.Integration.ServiceCollection": "5.5.0",
-          "Swashbuckle.AspNetCore": "6.5.0",
+          "Swashbuckle.AspNetCore": "6.9.0",
           "System.ComponentModel.Annotations": "5.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.3",
           "System.Text.Json": "8.0.0",
