@@ -1,0 +1,17 @@
+button {
+    height: 75px;
+    width: 200px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: rgb(36, 116, 192);
+    transition: all 1s ease-in-out .5s;
+}
+
+button:hover {
+    background-color: rgb(9, 161, 73);
+    color: black;
+    border-radius: 50%;
+    transform: scale(125%);
+    transform: translate(-400px);
+}
