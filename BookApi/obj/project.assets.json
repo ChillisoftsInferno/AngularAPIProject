@@ -482,7 +482,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dante d\\.nuget\\packages\\": {}
+    "C:\\Users\\dante d\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -494,10 +495,13 @@
       "outputPath": "C:\\Users\\dante d\\RiderProjects\\BookApi\\BookApi\\obj\\",
       "projectStyle": "PackageReference",
       "centralPackageVersionsManagementEnabled": true,
-      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
+      ],
       "configFilePaths": [
         "C:\\Users\\dante d\\NuGet.Config",
         "C:\\Users\\dante d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -505,6 +509,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -538,7 +544,9 @@
           }
         },
         "centralPackageVersions": {
+          "AutoMapper": "13.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "Azure.Identity": "1.13.1",
           "BCrypt.Net-Next": "4.0.3",
           "coverlet.collector": "6.0.0",
           "coverlet.msbuild": "6.0.0",
@@ -558,8 +566,8 @@
           "Microsoft.AspNetCore.Mvc.Testing": "8.0.0",
           "Microsoft.AspNetCore.SpaServices.Extensions": "8.0.0",
           "Microsoft.Data.Sqlite.Core": "8.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.0-rc.2.24474.1",
-          "Microsoft.EntityFrameworkCore.InMemory": "9.0.0-rc.2.24474.1",
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.10",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
@@ -568,6 +576,9 @@
           "Microsoft.NET.Test.Sdk": "17.6.0",
           "Moq": "4.18.4",
           "Newtonsoft.Json": "13.0.3",
+          "NLog": "5.3.4",
+          "NLog.Config": "4.7.15",
+          "NLog.Schema": "5.3.4",
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
           "NUnit3TestAdapter": "4.2.1",

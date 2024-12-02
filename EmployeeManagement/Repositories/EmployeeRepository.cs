@@ -36,12 +36,12 @@ public class EmployeeRepository : IEmployeeRepository
             .Where(employeeToSearch => employee.Phone == employeeToSearch.Phone)
             .Where(employeeToSearch => employee.Position == employeeToSearch.Position)
             .FirstOrDefaultAsync();
-
+    
     }
-
+    
     public async Task AddEmployeeAsync(Employee employee)
     {
-        await _context.Employees.AddAsync(employee);  
+        await _context.Employees.AddAsync(employee);
         await _context.SaveChangesAsync();
     }
 

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs'; //Used for async operations.
 
 export class BookService {
 
-  private apiUrl: string = 'http://localhost:5173/api/Book';
+  private apiUrl: string = 'https://localhost:7033';
 
   constructor(private httpClient : HttpClient) {}
 

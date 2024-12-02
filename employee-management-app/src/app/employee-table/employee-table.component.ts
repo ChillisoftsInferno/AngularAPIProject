@@ -35,7 +35,7 @@ export class EmployeeTableComponent {
     })
   }
 
-  editEmployee(id: number): void {
-    this.router.navigate([`edit/${id}`]);
+  editEmployee(id: number, name: string): void {
+    this.router.navigate([`edit/${id},${name}`]);
   }
 }
